@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
+        <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="functions.js"></script>
+    </head>
+    <body>
+        <div id="topbar">
+            <div id="title">
+                Landing Approach
+            </div>  <!--Überschrift-->
+            <div id="leftnav">
+                <a href="index_aerosoft.html">Home</a>
+                <a href="katana_checklist_all.html">Overview</a>
+            </div>
+            <div id="rightnav">
+                <a href="katan_checklist_afterlanding.html"id="a_next">Next</a>
+            </div><!--Nächste Seite-->
+        </div>
+        <div id="content">
+            <ul class="pageitem">
+                <li class="radiobutton">
+                    <span class="name">Seat Belts - fastened</span><!--Checkpunkt-->
+                    <input name="1" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Electric Fuel Pump - ON</span>
+                    <input name="2" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Exterior Lights - as required</span>
+                    <input name="3" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Master Switch (Batt./Generator) - check ON</span>
+                    <input name="4" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Ignition Switch - check BOTH</span>
+                    <input name="5" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Carburetor Heat - ON</span>
+                    <input name="6" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Airspeed - max. 81 kts</span>
+                    <input name="7" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Wing Flaps - T/O</span>
+                    <input name="8" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Trim - as required</span>
+                    <input name="9" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Prop Control Lever - max. RPM</span>
+                    <input name="10" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Wing Flaps - LDG</span>
+                    <input name="11" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Approach Speed - 57 kt</span>
+                    <input name="12" type="radio" value="other" />
+                </li>
+            </ul>
+        </div>
+        <div id="footer">
+            <a class="noeffect" href="#" onClick="resetChecklist();">Reset Checklist</a>
+            <br /><br />
+            <a class="noeffect" href="#" onClick="openAerosoftDE();">Aerosoft</a>
+        </div>
+    </body>
+</html>
+
+

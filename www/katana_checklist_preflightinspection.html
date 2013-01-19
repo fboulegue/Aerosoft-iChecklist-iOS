@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
+        <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="functions.js"></script>
+    </head>
+    <body>
+        <div id="topbar">
+            <div id="title">
+                Preflight Inspection
+            </div>
+            <div id="leftnav">
+                <a href="index_aerosoft.html">Home</a>
+                <a href="katana_checklist_all.html">Overview</a>
+            </div>
+            <div id="rightnav">
+                <a href="katan_checklist_walkaroundcheck.html"id="a_next">Next</a>
+            </div>
+        </div>
+        <div id="content">
+            <ul class="pageitem">
+                <li class="radiobutton">
+                    <span class="name">Struct. Temp. Indic.> 38°C -not exceed 55°C</span>
+                    <input name="1" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Airplane Documents - check </span>
+                    <input name="2" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Flight Control Lock - removed</span>
+                    <input name="3" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Flight Controls - proper direction of movement</span>
+                    <input name="4" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Ignition Key - pulled out</span>
+                    <input name="5" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Carburetor Heat - pushed in Off</span>
+                    <input name="05" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Cabin Heat - pushed in</span>
+                    <input name="6" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Choke - pushed in</span>
+                    <input name="7" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Parking Brake - pushed in</span>
+                    <input name="8" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Throttle - IDLE</span>
+                    <input name="9" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Propeller Speed Control Level - max. RPM</span>
+                    <input name="10" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Master Switch (Battery) - ON</span>
+                    <input name="011" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Warning Lights - illuminated</span>
+                    <input name="11" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Fuel Quantity - sufficient</span>
+                    <input name="12" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Engine Gauges, Ammeter, Voltmeter - check</span>
+                    <input name="13" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Circuit Breaker - pressed in</span>
+                    <input name="14" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Map Light - operational</span>
+                    <input name="15" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Instrument Lights - operational / dimmabel</span>
+                    <input name="16" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Elevator Trim - NEUTRAL</span>
+                    <input name="17" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Wing Flaps - check, extend, retract fully</span>
+                    <input name="18" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Trim / Flap Indicator Lts - operat. / dimmable</span>
+                    <input name="19" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Exterior Lights operational - as required</span>
+                    <input name="019" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Master Switch (Battery) - OFF</span>
+                    <input name="20" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Foreign Inspection - done</span>
+                    <input name="21" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Fire Extinguisher - check</span>
+                    <input name="22" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Baggage - stowed, baggage net attached</span>
+                    <input name="23" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Canopy - clean, undamaged</span>
+                    <input name="24" type="radio" value="other" />
+                </li>
+            </ul>
+        </div>
+        <div id="footer">
+            <a class="noeffect" href="#" onClick="resetChecklist();">Reset Checklist</a>
+            <br /><br />
+            <a class="noeffect" href="#" onClick="openAerosoftDE();">Aerosoft</a>
+        </div>
+    </body>
+</html>
+
