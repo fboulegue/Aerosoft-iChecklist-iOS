@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link href="../../fuctions/style.css" rel="stylesheet" media="screen" type="text/css" />
+        <script type="text/javascript" charset="utf-8" src="../../fuctions/cordova-2.3.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="../../fuctions/functions.js"></script>
+    </head>
+    <body>
+        <div id="topbar">
+            <div id="title">
+                Cruise
+            </div>
+            <div id="leftnav">
+                <a href="../../index_aerosoft.html">Home</a>
+                <a href="katana_checklist_all.html">Overview</a>
+            </div>
+            <div id="rightnav">
+                <a href="katan_checklist_descent.html"id="a_next">Next</a>
+            </div>
+        </div>
+        <div id="content">
+            <ul class="pageitem">
+                <li class="radiobutton">
+                    <span class="name">Throttle - as required</span>
+                    <input name="1" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Prop Control Lever - 1700-2260 RPM</span>
+                    <input name="2" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Trim - as required</span>
+                    <input name="3" type="radio" value="other" />
+                </li>
+                <li class="radiobutton">
+                    <span class="name">Engine Gauges - check</span>
+                    <input name="4" type="radio" value="other" />
+                </li>
+            </ul>
+        </div>
+        <div id="footer">
+            <a class="noeffect" href="#" onClick="resetChecklist();">Reset Checklist</a>
+            <br /><br />
+            <a class="noeffect" href="#" onClick="openAerosoftDE();">Aerosoft</a>
+        </div>
+    </body>
+</html>

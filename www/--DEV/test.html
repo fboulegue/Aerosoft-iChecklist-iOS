@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" charset="utf-8" src="../fuctions/cordova-2.3.0.js"></script>
+        <script type="text/javascript">
+               function onBodyLoad()
+            {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+            
+            function downloadFile(){
+                window.requestFileSystem(
+                                         LocalFileSystem.PERSISTENT, 0,
+                                         function onFileSystemSuccess(fileSystem) {
+                                         fileSystem.root.getFile(
+                                                                 "dummy.html", {create: true, exclusive: false},
+                                                                 function gotFileEntry(fileEntry){
+                                                                 var sPath = fileEntry.fullPath.replace("dummy.html","");
+                                                                 var fileTransfer = new FileTransfer();
+                                                                 fileEntry.remove();
+                                                                 
+                                                                 fileTransfer.download(
+                                                                                       "https://dl.dropbox.com/u/659484/index_aerosoft.html",
+                                                                                       sPath + "index_aerosoft.html",
+                                                                                       function(theFile) {
+                                                                                       console.log("download complete: " + theFile.toURI());
+                                                                                       showLink(theFile.toURI());
+                                                                                       },
+                                                                                       function(error) {
+                                                                                       console.log("download error source " + error.source);
+                                                                                       console.log("download error target " + error.target);
+                                                                                       console.log("upload error code: " + error.code);
+                                                                                       }
+                                                                                       );
+                                                                 },
+                                                                 fail);
+                                         }, 
+                                         fail);
+                
+            }
+            
+           
+            
+            
+            function fail(evt) {
+                console.log(evt.target.error.code);
+            }
+
+            function onDeviceReady()
+            {
+                downloadFile();
+            }
+            
+            </script>
+    </head>
+    <body onload="onBodyLoad()">
+        <br />
+        <a href="../index_aerosoft.html"id="a_next">home</a>
+        <br><br>
+        <a href="file://localhost/var/mobile/Applications/1AE34410-C57E-4896-8616-042E386552E0/Documents/index_aerosoft.html">?</a>
+        <br><br>
+        <a href="../../Documents/index_aerosoft.html">!</a>
+            
+            
+            <p>
+            DOWNLOADING FILE...<br />
+            <span id="ready"></span>
+            </p>
+            </body>
+</html>

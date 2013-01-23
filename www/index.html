@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
+    <head>
+        <link href="fuctions/style.css" rel="stylesheet" media="screen" type="text/css" />
+        <script type="text/javascript" charset="utf-8" src="fuctions/cordova-2.3.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="fuctions/functions.js"></script>
+    </head>
 <body onload="onBodyLoad()">
-<script type="text/javascript">
-window.location = "index_aerosoft.html";
-</script>
+    <script type="text/javascript">
+        checkFirstRun();
+    </script>
+    <div id="topbar">
+        <div id="title">
+            Aerosoft Checklist
+        </div>
+        <div id="leftbutton">
+            <a href="#" class="noeffect" onClick="openAerosoftDE();">Web</a>
+        </div>
+    </div>
+    <div id="tributton">
+        <div class="links">
+            <a href="index_aerosoft.html">Checklist</a><a href="news.html">News</a><a href="about.html">About</a>
+        </div>
+    </div>
+    <div id="content">
+        <ul class="pageitem">
+            <li class="textbox">
+                <span class="header">Information</span>
+                <p>
+                Wir Empfehlen vor dem Start der Anwendung sich das Tutorial Video einmal anzusehen, sollten Sie es erneut sehen wollen, können Sie dieses unter <a href="about.html"style="color:red; font-weight:bold; text-decoration:none;">"About"</a> erneut aufrufen.
+                </p>
+            </li>
+        </ul>
+        <ul class="pageitem">
+            <li class="store">
+                <a href="movie.mp4">
+                    <span class="image" style="background-image: url('images/video.png')"></span>
+                    <span class="name">Tutorial Video Ansehen</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+        </ul>
+        <ul class="pageitem">
+            <li class="store">
+                <a href="index_aerosoft.html">
+                    <span class="image" style="background-image: url('images/aerologo90x90.png')"></span>
+                    <span class="name">Weiter zur Anwendung</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+        </ul>
 </body>
 </html>
+
+
+
