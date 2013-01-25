@@ -3,6 +3,7 @@
         <link href="../../fuctions/style.css" rel="stylesheet" media="screen" type="text/css" />
         <script type="text/javascript" charset="utf-8" src="../../fuctions/cordova-2.3.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="../../fuctions/functions.js"></script>
+        <script type="text/javascript" charset="utf-8" src="../../fuctions/jq.js"></script>
     </head>
     <body>
         <div id="topbar">
@@ -19,112 +20,112 @@
         </div>
         <div id="content">
             <ul class="pageitem">
-                <li class="radiobutton">
-                    <span class="name">Struct. Temp. Indic.> 38°C -not exceed 55°C</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Struct. Temp. Indic.> 38 C - <font color="red">not exceed 55 C</font></span>
                     <input name="1" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Airplane Documents - check </span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Airplane Documents - <font color="red">check </font></span>
                     <input name="2" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Flight Control Lock - removed</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Flight Control Lock - <font color="red">removed</font></span>
                     <input name="3" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Flight Controls - proper direction of movement</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Flight Controls - <font color="red">proper direction of movement</font></span>
                     <input name="4" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Ignition Key - pulled out</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Ignition Key - <font color="red">pulled out</font></span>
                     <input name="5" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Carburetor Heat - pushed in Off</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Carburetor Heat - <font color="red">pushed in Off</font></span>
                     <input name="05" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Cabin Heat - pushed in</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Cabin Heat - <font color="red">pushed in</font></span>
                     <input name="6" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Choke - pushed in</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Choke - <font color="red">pushed in</font></span>
                     <input name="7" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Parking Brake - pushed in</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Parking Brake - <font color="red">pushed in</font></span>
                     <input name="8" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Throttle - IDLE</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Throttle - <font color="red">IDLE</font></span>
                     <input name="9" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Propeller Speed Control Level - max. RPM</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Propeller Speed Control Level - <font color="red">max. RPM</font></span>
                     <input name="10" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Master Switch (Battery) - ON</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Master Switch (Battery) - <font color="red">ON</font></span>
                     <input name="011" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Warning Lights - illuminated</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Warning Lights - <font color="red">illuminated</font></span>
                     <input name="11" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Fuel Quantity - sufficient</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Fuel Quantity - <font color="red">sufficient</font></span>
                     <input name="12" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Engine Gauges, Ammeter, Voltmeter - check</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Engine Gauges, Ammeter, Voltmeter - <font color="red">check</font></span>
                     <input name="13" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Circuit Breaker - pressed in</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Circuit Breaker - <font color="red">pressed in</font></span>
                     <input name="14" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Map Light - operational</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Map Light - <font color="red">operational</font></span>
                     <input name="15" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Instrument Lights - operational / dimmabel</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Instrument Lights - <font color="red">operational / dimmabel</font></span>
                     <input name="16" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Elevator Trim - NEUTRAL</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Elevator Trim - <font color="red">NEUTRAL</font></span>
                     <input name="17" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Wing Flaps - check, extend, retract fully</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Wing Flaps - <font color="red">check, extend, retract fully</font></span>
                     <input name="18" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Trim / Flap Indicator Lts - operat. / dimmable</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Trim / Flap Indicator Lts - <font color="red">operat. / dimmable</font></span>
                     <input name="19" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Exterior Lights operational - as required</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Exterior Lights operational - <font color="red">as required</font></span>
                     <input name="019" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Master Switch (Battery) - OFF</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Master Switch (Battery) - <font color="red">OFF</font></span>
                     <input name="20" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Foreign Inspection - done</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Foreign Inspection - <font color="red">done</font></span>
                     <input name="21" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Fire Extinguisher - check</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Fire Extinguisher - <font color="red">check</font></span>
                     <input name="22" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Baggage - stowed, baggage net attached</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Baggage - <font color="red">stowed, baggage net attached</font></span>
                     <input name="23" type="radio" value="other" />
                 </li>
-                <li class="radiobutton">
-                    <span class="name">Canopy - clean, undamaged</span>
+                <li class="radiobutton" onClick="checkChanges()">
+                    <span class="name">Canopy - <font color="red">clean, undamaged</font></span>
                     <input name="24" type="radio" value="other" />
                 </li>
             </ul>
