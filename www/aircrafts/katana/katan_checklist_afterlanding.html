@@ -1,50 +1,75 @@
 <html>
+    
     <head>
-        <link href="../../fuctions/style.css" rel="stylesheet" media="screen" type="text/css" />
+        <link href="../../fuctions/style.css" rel="stylesheet" media="screen"
+        type="text/css" />
         <script type="text/javascript" charset="utf-8" src="../../fuctions/cordova-2.3.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="../../fuctions/functions.js"></script>
         <script type="text/javascript" charset="utf-8" src="../../fuctions/jq.js"></script>
+        <script>
+            //need for function.js
+            //make checked <li> item green after checked -> uncheck red and remove checkmark
+            
+            $(document).ready(function() {
+                              activateStateToggle();
+                              });
+        </script>
+        
     </head>
+    
     <body>
         <div id="topbar">
-            <div id="title"><!--Title-->
-                After Landing
-            </div>  
-            <div id="leftnav">
-                <a href="../../index_aerosoft.html">Home</a>
-                <a href="katana_checklist_all.html">Overview</a><!--AllChecklist-->
+            <div id="title">
+                <!--Title-->After Landing</div>
+            <div id="leftnav"> <a href="../../index_aerosoft.html">Home</a>
+                <a href="katana_checklist_all.html">Overview</a>
+                
+                <!--AllChecklist-->
             </div>
-            <div id="rightnav">
-                <a href="katan_checklist_engineshut-downl.html"id="a_next">Next</a></div><!--NextPage-->
+            <div id="rightnav"> <a href="katan_checklist_engineshut-downl.html" id="a_next">Next</a>
+                
             </div>
-            <div id="content">
-                <ul class="pageitem">
-                    <li class="radiobutton" onClick="checkChanges()">
-                        <span class="name">Wing Flaps -<font color="red"> UP
-                        </font></span>
-                        <input name="1" type="radio" value="other" />
-                    </li><!--CheckpunktEnd-->
-                    <li class="radiobutton" onClick="checkChanges()">
-                        <span class="name">Carburetor Heat -<font color="red"> OFF
-                        </font></span>
-                        <input name="2" type="radio" value="other" />
-                    </li><!--CheckpunktEnd-->
-                    <li class="radiobutton" onClick="checkChanges()">
-                        <span class="name">Exterior Lights -<font color="red"> as required
-                        </font></span>
-                        <input name="3" type="radio" value="other" />
-                    </li><!--CheckpunktEnd-->
-                    <li class="radiobutton" onClick="checkChanges()">
-                        <span class="name">Electric Fuel Pump -<font color="red"> OFF
-                        </font></span>
-                        <input name="4" type="radio" value="other" />
-                    </li><!--CheckpunktEnd-->
-                </ul>
-            </div>
-            <div id="footer">
-                <a class="noeffect" href="#" onClick="resetChecklist();">Reset Checklist</a><!--ResetChecklist-->
-                <br /><br />
-                <a class="noeffect" href="#" onClick="openAerosoftDE();">Aerosoft</a>
-            </div>
+            <!--NextPage-->
+        </div>
+        <div id="content">
+            <ul class="pageitem">
+                <li class="radiobutton"> <span class="name">Wing Flaps -<font color="red"> UP
+                </font></span>
+                    
+                    <input name="1" type="radio"
+                    value="other" onchange="checkChanges()" />
+                </li>
+                <!--CheckpunktEnd-->
+                <li class="radiobutton"> <span class="name">Carburetor Heat -<font color="red"> OFF
+                </font></span>
+                    
+                    <input name="2" type="radio"
+                    value="other" onchange="checkChanges()" />
+                </li>
+                <!--CheckpunktEnd-->
+                <li class="radiobutton"> <span class="name">Exterior Lights -<font color="red"> as required
+                </font></span>
+                    
+                    <input name="3" type="radio"
+                    value="other" onchange="checkChanges()" />
+                </li>
+                <!--CheckpunktEnd-->
+                <li class="radiobutton"> <span class="name">Electric Fuel Pump -<font color="red"> OFF
+                </font></span>
+                    
+                    <input name="4" type="radio"
+                    value="other" onchange="checkChanges()" />
+                </li>
+                <!--CheckpunktEnd-->
+            </ul>
+        </div>
+        <div id="footer"> <a class="noeffect" href="#" onClick="resetChecklist();">Reset Checklist</a>
+            
+            <!--ResetChecklist-->
+            <br />
+            <br /> <a class="noeffect" href="#" onClick="openxyzDE();">xyz</a>
+            
+        </div>
     </body>
+    
 </html>

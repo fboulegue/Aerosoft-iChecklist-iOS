@@ -251,20 +251,44 @@ function checkFirstRun()
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////AIRPLANES/////////////////////////////////////
-//make checked <li> item green after checked
-function checkChanges()
-{
+//make checked <li> item green after checked -> uncheck red and remove checkmark
+function checkChanges() {
+    var $this = $(this);
     
-    $('.radiobutton font').attr('color', 'red');
-    
-    $('.radiobutton :checked').closest('.radiobutton').find('font').attr('color', 'green');
+    if (!$this.parent().hasClass("checked")) {
+        $this.attr("checked", "checked");
+        $this.parent().find("font").attr("color", "green");
+        $this.parent().addClass("checked");
+    } else {
+        $this.parent().removeClass("checked");
+        $this.parent().find("font").attr("color", "red");
+        $this.removeAttr("checked");
+    }
 }
-
-$(function()
-  {
-  checkChanges();
-  $('.radiobutton :radio').on('click', checkChanges);
-  });
+//!!!!SET FOR STANDARD
+//<script>
+//need for function.js
+//make checked <li> item green after checked -> uncheck red and remove checkmark
+//
+//$(document).ready(function() {
+//                  activateStateToggle();
+//                  });
+//</script>
+//!!!!!AT PAGE HEAD
+function activateStateToggle() {
+    $(".radiobutton").bind("click", function () {
+                           var $this = $(this);
+                           if (!$this.hasClass("checked")) {
+                           $this.find("input").attr("checked", "checked");
+                           $this.find("font").attr("color", "green");
+                           $this.addClass("checked");
+                           } else {
+                           $this.removeClass("checked");
+                           $this.find("font").attr("color", "red");
+                           $this.find("input").removeAttr("checked");
+                           }
+                           });
+}
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////KATANA//////////////////
 //////////////////////////////////////////////////////////////////////////////////
