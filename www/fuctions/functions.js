@@ -37,6 +37,7 @@ function showAlertChecklist()
         'Achtung!',            // title
         'OK'                  // buttonName
     )
+    console.log('show_message_checklist');
 }
 //////////////////////////////////////////////////////////////////////////////////
 // show a custom alert for comingsoon
@@ -51,6 +52,7 @@ function showAlertCommingSoon()
         'OK'                  // buttonName
      
      )
+    console.log('show_message_soon');
 }
 //////////////////////////////////////////////////////////////////////////////////
 // reset the checklist
@@ -58,6 +60,7 @@ function showAlertCommingSoon()
 function resetChecklist()
 {
     window.location.reload()
+    console.log('click_resetchecklist');
 }
 //////////////////////////////////////////////////////////////////////////////////
 //internet connection check
@@ -68,6 +71,7 @@ function checkInternet()
     if (networkState == Connection.NONE)
     {
         window.location = "fuctions_pages/offline_news.html";
+        console.log('no_internet_connection_called');
     }
 }
 //internet connection check from aircraft
@@ -78,6 +82,7 @@ function checkInternetFromAircraft()
     if (networkState == Connection.NONE)
     {
         window.location = "../../fuctions_pages/offline_news.html";
+        console.log('no_internet_connection_called');
     }
 }
 //////////////////////////////////////////////////////////////////////////////////
@@ -86,11 +91,7 @@ function checkInternetFromAircraft()
 function openAerosoftDE()
 {
     var ref = window.open('http://aerosoft.de', '_blank', 'location=no');
-    // close InAppBrowser after 5 seconds
-    setTimeout(function()
-               {
-               ref.close();
-               }, 500000);
+    console.log('click_openAerosoftDE_succes');
 }
 //////////////////////////////////////////////////////////////////////////////////
 //open news iframeaerosoft.de
@@ -98,11 +99,7 @@ function openAerosoftDE()
 function openAerosoftNews()
 {
     var ref = window.open('http://fboulegue.pf-control.de/aerosoftapp/', '_blank', 'location=no');
-    // close InAppBrowser after 5 seconds
-    setTimeout(function()
-    {
-               ref.close();
-    }, 500000);
+    console.log('openNewsAerosoft');
 }
 //////////////////////////////////////////////////////////////////////////////////
 //open addpage if offline show alert
@@ -110,11 +107,8 @@ function openAerosoftNews()
 function openaddPage()
 {
     var ref = window.open('http://fboulegue.pf-control.de/aerosoftapp/add.html', '_blank', 'location=no');
-    // close InAppBrowser after 5 seconds
-    setTimeout(function()
-               {
-               ref.close();
-               }, 500000);
+    console.log('openAddsAerosoft');
+
 }
 //////////////////////////////////////////////////////////////////////////////////
 //load news aerosoft.de
@@ -204,12 +198,14 @@ function checkFirstRun()
     if(window.localStorage.getItem('run')==null)
     {
         window.localStorage.setItem('run','1');
+        console.log('FirstRun_FIRSTRUN');
         //alert("First start");
     }
         else if(window.localStorage.getItem('run')==25) //ANZAHL DER STARTS BIS WERBUNG KOMMT
     {
         window.localStorage.setItem('run','1');
         window.location = "fuctions_pages/add.html";
+        console.log('FirstRun_25RUN');
         //alert(window.localStorage.getItem('run'));
     }
         else
@@ -219,6 +215,7 @@ function checkFirstRun()
                 irun = (parseInt(run) + 1);
                 window.localStorage.setItem('run',irun.toString());
                 window.location = "index_aerosoft.html";
+                console.log('FirstRun_NOTFIRSTRUN');
                 //alert(window.localStorage.getItem('run'));
             }
 }
@@ -236,10 +233,12 @@ function checkChanges() {
         $this.attr("checked", "checked");
         $this.parent().find("font").attr("color", "green");
         $this.parent().addClass("checked");
+        console.log('li-green');
     } else {
         $this.parent().removeClass("checked");
         $this.parent().find("font").attr("color", "red");
         $this.removeAttr("checked");
+        console.log('li-red');
     }
 }
 //!!!!SET FOR STANDARD
@@ -259,10 +258,12 @@ function activateStateToggle() {
                            $this.find("input").attr("checked", "checked");
                            $this.find("font").attr("color", "green");
                            $this.addClass("checked");
+                           console.log('li-green');
                            } else {
                            $this.removeClass("checked");
                            $this.find("font").attr("color", "red");
                            $this.find("input").removeAttr("checked");
+                           console.log('li-red');
                            }
                            });
 }
@@ -278,14 +279,12 @@ function openBuyKatanaCheckConnection()
 	if (networkState == Connection.NONE)
     {
         window.location = "../../fuctions_pages/offline_checklist_katana.html";
+        console.log('buy-katana-offline');
     }
 	else
 	{
 		var ref = window.open('http://en.shop.aerosoft.com/eshop.php?action=article_detail&s_supplier_aid=11388', '_blank', 'location=no');
-        setTimeout(function()
-                   {
-                   ref.close();
-                   }, 500000);
+        console.log('buykatana');
 	}
 }
 //////////////////////////////////////////////////////////////////////////////////
@@ -297,14 +296,12 @@ function openVideoKatanaCheckConnection()
 	if (networkState == Connection.NONE)
     {
         window.location = "../../fuctions_pages/offline_checklist_katana.html";
+        console.log('videokatana-offline');
     }
 	else
 	{
 		var ref = window.open('http://www.youtube.com/embed/Mnpbroh3rjU', '_blank', 'location=no');
-        setTimeout(function()
-                   {
-                   ref.close();
-                   }, 500000);
+        console.log('videokatana');
 	}
 }
 //////////////////////////////////////////////////////////////////////////////////
@@ -316,14 +313,12 @@ function openPDFKatanaCheckConnection()
 	if (networkState == Connection.NONE)
     {
         window.location = "../../fuctions_pages/offline_checklist_katana.html";
+        console.log('pdfkatana-offline');
     }
 	else
 	{
 		var ref = window.open('http://http://www.aerosoft2.de/downloads/katana4x/DA20-100-Katana-Engl.pdf', '_blank', 'location=no');
-        setTimeout(function()
-                   {
-                   ref.close();
-                   }, 500000);
+        console.log('pdfkatana');
 	}
 }
 //////////////////KATANA//////////////////
