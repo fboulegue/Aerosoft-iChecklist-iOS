@@ -12,20 +12,21 @@ function generateNewsList(elementIdToAppend) {
         url: 'http://fboulegue.pf-control.de/aerosoftapp/ajax.getNews.php', //Bitte die richtige URL angeben
         data: {url: url},
         success: function(responseHTML){
+            //alert("test");
             /* Wenn News erfolgreich abgerufen */
             if(responseHTML != '0') {
                 jQuery('body').append('<div id="hidden-news-html" style="display:none;">'+responseHTML+'</div>');
                 // Das Loader Icon langsam einblenden
                 jQuery('#ajax-loader-news').fadeOut('fast', function(){
                     // Wenn Einblendevorgang beendet, den Newsquellcode versteckt dem document anhängen
-                    jQuery('body').find('#'+elementIdToAppend).append(responseHTML);
+                    //jQuery('body').find('#'+elementIdToAppend).append(responseHTML);
                     // dem UL die News (welche in der Funktion generateNews() zusammengestellt werden) anhängen
                     jQuery('#content').append(generateHTMLList());
                     // danach langsam einblenden
                     jQuery('#news-list-view').fadeIn('slow', function() {
-                        setNewsLinks();
+                        //setNewsLinks();
                         // den versteckten Quellcode, welcher als Hilfe zuvor benötigt wurde, wieder entfernen
-                        jQuery('#hidden-news-html').remove();
+                       //jQuery('#hidden-news-html').remove();
                     });
                 });
             }
@@ -46,7 +47,6 @@ function generateNewsList(elementIdToAppend) {
  * @return {String} -> generierte HTML UL Liste
  */
 function generateHTMLList() {
-alert("drin");
     jQuery('#news-list-view').fadeOut('fast', function() {
         jQuery(this).remove();
     });
@@ -56,28 +56,30 @@ alert("drin");
 		//var content = jQuery(this).find('.text_body p').text();
         var image = jQuery(this).find('.navlink img').attr('src');
 		//var linkItems = new Array();
-		contentHTM += '<span class="graytitle">'+headline+'</span>';
-		contentHTML += '<ul class="pageitem" style="display:none">';
+		contentHTML += '<span class="graytitle">'+headline+'</span>';
+		contentHTML += '<ul class="pageitem" style="display:block">';
 		
 		jQuery(this).find('.text_bodyred a.navlinkred').each(function(index, elem){
 			//linkItems[index]['title'] = jQuery(this).text();	
 			//linkItems[index]['url'] = jQuery(this).attr('href');
 			var title = jQuery(this).text();	
 			var url = jQuery(this).attr('href');
-			contentHTML += '<li class="store">';
-			contentHtmL += '<a href="'+url+'">';
-            contentHtmL += '<span class="image" style="background-image: url('+image+')"></span>';
-            contentHtmL += '<span class="name">'+title+'</span>';
-            contentHtmL += '<span class="arrow"></span>';
-            contentHtmL += '</a>';
-        	contentHTML += '</li>';	
+                        if(url.length >= 8) {
+                            contentHTML += '<li class="store">';
+                            contentHTML += '<a href="'+url+'">';
+                            contentHTML += '<span class="image" style="background-image: url('+image+')"></span>';
+                            contentHTML += '<span class="name">'+title+'</span>';
+                            contentHTML += '<span class="arrow"></span>';
+                            contentHTML += '</a>';
+                            contentHTML += '</li>';	    
+                        }
+			
 		});
         
 		contentHTML += '</ul>';                                                        
 
     });
     contentHTML += '</div>';
-	console.log(contentHTML);
     return contentHTML;
 }
 

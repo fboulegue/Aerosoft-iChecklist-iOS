@@ -65,10 +65,10 @@ window.onload = function()
         for (i=0; i < els.length; i++)
         {
             if (!els[i].checked)
-                {
-                    showAlertChecklist();
-                    return false;
-                }
+            {
+                showAlertChecklist();
+                return false;
+            }
         }
     }
 }
@@ -145,11 +145,11 @@ function openaddPage()
  * @return gibt die News zurueck
  */
 function loadNews(elementIdToAppend) {
-    var url = 'http://news.aerosoft.com/list_news.php?cat=fs&lang=de';
-
+    var urlNews = 'http://news.aerosoft.com/list_news.php?cat=fs&lang=de';
     jQuery.ajax({
         url: 'http://fboulegue.pf-control.de/aerosoftapp/ajax.getNews.php', //Bitte die richtige URL angeben
-        data: {url: url},
+        data: {url: urlNews},
+        type:'POST',
         success: function(responseHTML){
             /* Wenn News erfolgreich abgerufen */
             if(responseHTML != '0') {
@@ -162,7 +162,6 @@ function loadNews(elementIdToAppend) {
                     jQuery('#content').append(generateNews());
                     // danach langsam einblenden
                     jQuery('ul.pageitem').fadeIn('slow', function() {
-                        setNewsLinks();
                         // den versteckten Quellcode, welcher als Hilfe zuvor benötigt wurde, wieder entfernen
                         jQuery('#hidden-news-html').remove();
                     });
@@ -216,9 +215,7 @@ function generateNews() {
 }
 
 
-jQuery(document).ready(function() {
-    loadNews('aeorosoft-news');                  //DAS IST FUNKTION
-});
+
 //////////////////////////////////////////////////////////////////////////////////
 //check first run
 //

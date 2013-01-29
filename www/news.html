@@ -11,7 +11,10 @@
             document.addEventListener("deviceready", onDeviceReady, false);
             function onDeviceReady() {
                 checkInternet(); //function
-            }
+            };
+            jQuery(document).ready(function() {
+                                   loadNews('aeorosoft-news');                  //DAS IST FUNKTION
+                                   });
         </script>
     </head>
     <body>
@@ -27,7 +30,7 @@
                 <a href="index_aerosoft.html">Checklist</a><a id="pressed" href="news.html">News</a><a href="about.html">About</a>
             </div>
         </div>
-        <div id="content">
+        <div id="content"><div id="notaircraft"></div>
             <span class="graytitle"></span>
            <div id="ajax-loader-news"></div>
         </div>
