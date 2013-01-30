@@ -32,12 +32,14 @@ function showAlertChecklist()
 {
     navigator.notification.alert
     (
-        'Bitte Checkliste überprüfen',  // message
+        'Bitte Checkliste überprüfen, alle Punkte müssen gechecked sein.',  // message
         alertDismissed,         // callback
         'Achtung!',            // title
         'OK'                  // buttonName
     )
-    console.log('show_message_checklist');
+    console.log('show_message_checklist + vibrate ');
+    navigator.notification.vibrate(2500);
+
 }
 //////////////////////////////////////////////////////////////////////////////////
 // show a custom alert for comingsoon
