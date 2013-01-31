@@ -235,7 +235,6 @@ function checkChanges() {
         $this.attr("checked", "checked");
         $this.parent().find("font").attr("color", "green");
         $this.parent().addClass("checked");
-        console.log('li-green');
     } else {
         $this.parent().removeClass("checked");
         $this.parent().find("font").attr("color", "red");
