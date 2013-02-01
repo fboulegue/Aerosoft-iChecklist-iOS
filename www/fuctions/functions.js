@@ -88,12 +88,12 @@ function checkInternetFromAircraft()
     }
 }
 //////////////////////////////////////////////////////////////////////////////////
-//open aerosoft.de if offline show alert
+//open aerosoft.de 
 //
 function openAerosoftDE()
 {
-    var ref = window.open('http://aerosoft.de', '_blank', 'location=no');
-    console.log('click_openAerosoftDE_succes');
+    var ref = window.open('http://aerosoft.de', '_blank', 'location=no,enableViewportScale=yes');
+    console.log('click_openAerosoftDE_succes mit scale');
 }
 //////////////////////////////////////////////////////////////////////////////////
 //open news iframeaerosoft.de
@@ -284,7 +284,7 @@ function openBuyKatanaCheckConnection()
     }
 	else
 	{
-		var ref = window.open('http://en.shop.aerosoft.com/eshop.php?action=article_detail&s_supplier_aid=11388', '_blank', 'location=no');
+		var ref = window.open('http://www.shop.aerosoft.com/eshop.php?action=article_detail&s_supplier_aid=11976', '_blank', 'location=no,enableViewportScale=yes');
         console.log('buykatana');
 	}
 }
@@ -301,7 +301,7 @@ function openVideoKatanaCheckConnection()
     }
 	else
 	{
-		var ref = window.open('http://www.youtube.com/embed/Mnpbroh3rjU', '_blank', 'location=no');
+		var ref = window.open('http://www.youtube.com/embed/Mnpbroh3rjU?autoplay=1', '_blank', 'location=no,enableViewportScale=yes,mediaPlaybackRequiresUserAction=no,allowInlineMediaPlayback=yes,');
         console.log('videokatana');
 	}
 }
@@ -318,7 +318,7 @@ function openPDFKatanaCheckConnection()
     }
 	else
 	{
-		var ref = window.open('http://http://www.aerosoft2.de/downloads/katana4x/DA20-100-Katana-Engl.pdf', '_blank', 'location=no');
+		var ref = window.open('http://fboulegue.pf-control.de/aerosoftapp/katana/katana.html', '_blank', 'location=no,');
         console.log('pdfkatana');
 	}
 }
